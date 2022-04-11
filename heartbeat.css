@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.main-container{
+	width: 800px;
+	height: 600px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+#inner-wrapper{
+	height: 160px;
+	width: 160px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	overflow: visible;
+}
+
+.button-animation{
+	overflow: visible;
+}
+
+
+/*--- Styling and keyframes for the heart
+-----------------------------------*/
+.heart{
+	animation: heartSize 2s infinite;
+}
+
+@keyframes heartSize {
+  9%   { transform: scale(1); transform-origin: center;}
+  10%   { transform: scale(1.1);}
+  24%   { transform: scale(1);}
+  25%   { transform: scale(1.1);}
+  34%   { transform: scale(1);}
+  100% {transform: scale(1); transform-origin: center;}
+}
+
+
+/*--- Styling and keyframes for the first beat
+-----------------------------------*/
+.beat-1{
+	animation: beatOne 2s infinite;
+}
+
+@keyframes beatOne {
+  10%   { transform: scale(1); opacity: 1; transform-origin: center;}
+  70%	{transform: scale(1.5); opacity: 0;}
+  100%   { transform: scale(1); opacity: 0; transform-origin: center;}
+}
+
+
+/*--- Styling and keyframes for the second beat
+-----------------------------------*/
+.beat-2{
+	animation: beatTwo 2s infinite;
+}
+
+@keyframes beatTwo{
+  25%   { transform: scale(1); opacity: 1; transform-origin: center;}
+  85%	{transform: scale(1.5); opacity: 0;}
+  100%   { transform: scale(1); opacity: 0; transform-origin: center;}
+}
